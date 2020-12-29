@@ -8,6 +8,10 @@ namespace OpenClassRoom_ToString
         {
             ObjetVide monObjetVide = new ObjetVide();
             Chien chien = new Chien();
+
+            ChienMuet pauvreChien = new ChienMuet();
+            pauvreChien.Aboyer();
+
             chien.Prenom = "Medor";
             int age = 30;
             string prenom = "Nicolas";
@@ -16,6 +20,17 @@ namespace OpenClassRoom_ToString
             AfficherRepresentation(chien);
             AfficherRepresentation(age);
             AfficherRepresentation(prenom);
+
+
+            Math math = new Math();
+            int a = 5;
+            int b = 6;
+            int resultat = math.Addition(a, b);
+
+            double c = 1.5;
+            double d = 5.0;
+            double resultatDouble = math.Addition(c, d); // ca compile, youpi
+            
 
         }
 
@@ -67,4 +82,20 @@ namespace OpenClassRoom_ToString
     public class ObjetVide
     {
     }
+
+    public class Math
+    {
+        public int Addition(int a, int b)
+        {
+            return a + b;
+        }
+
+        public double Addition(double a, double b)
+        {
+            return a + b;
+        }
+
+  
+    }
+
 }
