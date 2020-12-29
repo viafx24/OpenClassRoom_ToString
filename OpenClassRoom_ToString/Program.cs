@@ -30,7 +30,16 @@ namespace OpenClassRoom_ToString
             double c = 1.5;
             double d = 5.0;
             double resultatDouble = math.Addition(c, d); // ca compile, youpi
-            
+
+
+
+            Voiture voitureNicolas = new Voiture { Vitesse = 10, Marque = "Peugeot", Couleur = "Grise" };
+            Voiture voitureJeremie = new Voiture { Vitesse = 10, Marque = "Peugeot", Couleur = "Grise" };
+            if (voitureNicolas.Equals(voitureJeremie))
+            {
+                Console.WriteLine("Les objets ont les mêmes valeurs dans leurs propriétés");
+            }
+
 
         }
 
@@ -96,6 +105,22 @@ namespace OpenClassRoom_ToString
         }
 
   
+    }
+
+
+    public class Voiture
+    {
+        public string Couleur { get; set; }
+        public string Marque { get; set; }
+        public int Vitesse { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            Voiture v = obj as Voiture;
+            if (v == null)
+                return false;
+            return Vitesse == v.Vitesse && Couleur == v.Couleur && Marque == v.Marque;
+        }
     }
 
 }
