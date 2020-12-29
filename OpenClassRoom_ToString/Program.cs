@@ -50,9 +50,17 @@ namespace OpenClassRoom_ToString
             return "Je suis un chien et je m'appelle " + Prenom;
         }
 
-        public void Aboyer()
+        public virtual void Aboyer()
         {
             Console.WriteLine("Wouaf !");
+        }
+    }
+
+    public class ChienMuet : Chien
+    {
+        public override void Aboyer()
+        {
+            Console.WriteLine("...");
         }
     }
 
