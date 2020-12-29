@@ -8,6 +8,7 @@ namespace OpenClassRoom_ToString
         {
             ObjetVide monObjetVide = new ObjetVide();
             Chien chien = new Chien();
+            chien.Prenom = "Medor";
             int age = 30;
             string prenom = "Nicolas";
 
@@ -15,6 +16,7 @@ namespace OpenClassRoom_ToString
             AfficherRepresentation(chien);
             AfficherRepresentation(age);
             AfficherRepresentation(prenom);
+
         }
 
         private static void AfficherRepresentation(object monObjetVide)
@@ -38,13 +40,22 @@ namespace OpenClassRoom_ToString
         }
     }
 
-    public class Chien : Animal
+
+    public class Chien
     {
+        public string Prenom { get; set; }
+
+        public override string ToString()
+        {
+            return "Je suis un chien et je m'appelle " + Prenom;
+        }
+
         public void Aboyer()
         {
             Console.WriteLine("Wouaf !");
         }
     }
+
     public class ObjetVide
     {
     }
