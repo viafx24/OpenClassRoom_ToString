@@ -23,6 +23,28 @@ namespace OpenClassRoom_ToString
         }
     }
 
+    public class Animal
+    {
+        protected string prenom;
+
+        public Animal()
+        {
+            prenom = "Marcel";
+        }
+
+        public void Respirer()
+        {
+            Console.WriteLine("Je suis " + prenom + " et je respire");
+        }
+    }
+
+    public class Chien : Animal
+    {
+        public void Aboyer()
+        {
+            Console.WriteLine("Wouaf !");
+        }
+    }
     public class ObjetVide
     {
     }
