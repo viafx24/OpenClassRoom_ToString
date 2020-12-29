@@ -22,4 +22,8 @@ namespace OpenClassRoom_ToString
             Console.WriteLine(monObjetVide.ToString());
         }
     }
+
+    public class ObjetVide
+    {
+    }
 }
